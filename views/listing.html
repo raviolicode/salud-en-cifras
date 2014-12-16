@@ -1,0 +1,15 @@
+<h1>Listado</h1>
+
+<table class='table table-striped'>
+  <thead>
+    <tr>
+      <th>Nombre</th>
+      <th>Página Web</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="provider in providers">
+      <td>{{provider.name}}</td>
+      <td>{{provider.web}}</td>
+    </tr>
+  </tbody>
