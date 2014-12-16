@@ -1,0 +1,15 @@
+<h1>Listado</h1>
+
+<table class='table table-striped'>
+  <thead>
+    <tr>
+      <th>Criterio</th>
+      <th>Valor / Mediana</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr ng-repeat="attribute in attributes">
+      <td>{{attribute.description}}</td>
+      <td ng-repeat="provider in providers">{{provider[attribute.group][attribute.name]}} / {{stats[attribute.group][attribute.name]["50"] | number:2 }}</td>
+    </tr>
+  </tbody>
