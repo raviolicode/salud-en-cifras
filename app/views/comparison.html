@@ -4,26 +4,27 @@
   <thead>
     <tr>
       <th>Criterio</th>
-      <th>Valor / Mediana</th>
+      <th ng-repeat="provider in providers">{{provider.estructura.nombre_completo}}</th>
     </tr>
   </thead>
   <tbody>
-    <tr><td>Precios</td></tr>
+    <tr class="table-group"><td colspan="{{providers.length + 1}}">Estructura</td></tr>
+    <tr ng-repeat="attribute in structure_attr">
+      <td>{{attribute}}</td>
+      <td ng-repeat="provider in providers">{{provider.estructura[attribute]}}</td>
+    </tr>
+  <tbody>
+    <tr class="table-group"><td colspan="{{providers.length + 1}}">Precios</td></tr>
     <tr ng-repeat="attribute in prices_attr">
       <td>{{attribute}}</td>
-      <td ng-repeat="provider in providers">{{providers[precios][attribute]}} / {{stats[precios][attribute]["50"] | number:2 }}</td>
+      <td ng-repeat="provider in providers">{{provider.precios[attribute]}} / {{stats.precios[attribute]["50"] | number:2 }}</td>
     </tr>
   </tbody>
   <tbody>
-    <tr><td colspan="{{providers.count + 1}}">Tiempos de Espera</td></tr>
+    <tr class="table-group"><td colspan="{{providers.length + 1}}">Tiempos de Espera</td></tr>
     <tr ng-repeat="attribute in times_attr">
       <td>{{attribute}}</td>
-      <td ng-repeat="provider in providers">{{providers[tiempos_espera][attribute]}} / {{stats[tiempos_espera][attribute]["50"] | number:2 }}</td>
-    </tr>
-  </tbody>
-
-    <!-- <tr ng&#45;repeat="attribute in Object.keys(group)"> -->
-      <!-- <td>{{attribute.name.split("_", " ").capitalize()}}</td> -->
+      <td ng-repeat="provider in providers">{{provider.tiempos_espera[attribute]}} / {{stats.tiempos_espera[attribute]["50"] | number:2 }}</td>
     </tr>
   </tbody>
 </table>

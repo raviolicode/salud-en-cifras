@@ -14,3 +14,9 @@ table th ul {
 table th li {
   list-style-type: none;
 }
+
+table tr.table-group td {
+  font-weight: bold;
+  font-size: 110%;
+  background: darkgray;
+}
