@@ -11,6 +11,8 @@ angular.module('saludEnCifrasApp')
         $scope.prices_attr = Object.keys(provider.precios);
         $scope.times_attr = Object.keys(provider.tiempos_espera);
         $scope.structure_attr = Object.keys(provider.estructura);
+        $scope.resources_attr = Object.keys(provider.rrhh);
+        console.log(provider.rrhh);
       });
   });
 
