@@ -1,4 +1,4 @@
-<h1>Listado</h1>
+<h1>Comparacion</h1>
 
 <table class='table table-striped'>
   <thead>
@@ -8,8 +8,22 @@
     </tr>
   </thead>
   <tbody>
-    <tr ng-repeat="attribute in attributes">
-      <td>{{attribute.description}}</td>
-      <td ng-repeat="provider in providers">{{provider[attribute.group][attribute.name]}} / {{stats[attribute.group][attribute.name]["50"] | number:2 }}</td>
+    <tr><td>Precios</td></tr>
+    <tr ng-repeat="attribute in prices_attr">
+      <td>{{attribute}}</td>
+      <td ng-repeat="provider in providers">{{providers[precios][attribute]}} / {{stats[precios][attribute]["50"] | number:2 }}</td>
     </tr>
   </tbody>
+  <tbody>
+    <tr><td colspan="{{providers.count + 1}}">Tiempos de Espera</td></tr>
+    <tr ng-repeat="attribute in times_attr">
+      <td>{{attribute}}</td>
+      <td ng-repeat="provider in providers">{{providers[tiempos_espera][attribute]}} / {{stats[tiempos_espera][attribute]["50"] | number:2 }}</td>
+    </tr>
+  </tbody>
+
+    <!-- <tr ng&#45;repeat="attribute in Object.keys(group)"> -->
+      <!-- <td>{{attribute.name.split("_", " ").capitalize()}}</td> -->
+    </tr>
+  </tbody>
+</table>
