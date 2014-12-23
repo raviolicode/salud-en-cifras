@@ -26,6 +26,7 @@
             <li>Cirugía gral.</li>
             <li>Pediatría</li>
             <li>Ginecología</li>
+            <li>Médico de referencia</li>
           </ul>
         </div>
       </th>
@@ -50,10 +51,10 @@
         </div>
         <div class="description">
           <ul>
-            <li>Ticket general</li>
-            <li>Consulta med. gral.</li>
-            <li>Cons. urgentes</li>
-            <li>Ecografia</li>
+            <li>Medicamentos</li>
+            <li>Tickets</li>
+            <li>Urgencia</li>
+            <li>Estudios</li>
           </ul>
         </div>
       </th>
@@ -63,8 +64,10 @@
         </div>
         <div class="description">
           <ul>
-            <li>Medicos</li>
+            <li>Medicos generales</li>
+            <li>Medicos familia</li>
             <li>Pediatras</li>
+            <li>Ginecólogos</li>
             <li>Enfermeros</li>
             <li>Lic. en Enfermería</li>
           </ul>
@@ -93,6 +96,7 @@
           <p>{{provider.tiempos_espera.cirugia}}</p>
           <p>{{provider.tiempos_espera.pediatria}}</p>
           <p>{{provider.tiempos_espera.ginecologia}}</p>
+          <p>{{provider.tiempos_espera.medico_referencia}}</p>
         </div>
       </td>
       <td>
@@ -107,17 +111,19 @@
       <td>
         <!-- add directive for this provider -->
         <div class="price_icons">
-          <p>{{provider.precios.ticket_general}}</p>
-          <p>{{provider.precios.med_general}}</p>
-          <p>{{provider.precios.urgencia}}</p>
-          <p>{{provider.precios.ecografia}}</p>
+          <p>{{provider.precios.promedios.medicamentos | number:2}}</p>
+          <p>{{provider.precios.promedios.tickets | number:2}}</p>
+          <p>{{provider.precios.promedios.tickets_urgentes | number:2}}</p>
+          <p>{{provider.precios.promedios.estudios | number:2}}</p>
         </div>
       </td>
       <td>
         <!-- add directive for this provider -->
         <div class="price_icons">
           <p>{{provider.rrhh.medicos_generales}}</p>
+          <p>{{provider.rrhh.medicos_familia}}</p>
           <p>{{provider.rrhh.pediatras}}</p>
+          <p>{{provider.rrhh.ginecologos}}</p>
           <p>{{provider.rrhh.aux_enfermeria}}</p>
           <p>{{provider.rrhh.lic_enfermeria}}</p>
         </div>
