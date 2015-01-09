@@ -6,7 +6,7 @@ angular.module('saludEnCifrasApp')
       .then(function(res) {
         var data = res.data;
         $scope.stats = data["stats"];
-        $scope.providers = data["providers"].slice(0,20);
+        $scope.providers = data["providers"];
         var provider = $scope.providers[0];
         $scope.prices_attr = Object.keys(provider.precios);
         $scope.times_attr = Object.keys(provider.tiempos_espera);
