@@ -3,7 +3,8 @@
 angular
   .module('saludEnCifrasApp', [
     'ngResource',
-    'ngRoute'
+    'ngRoute',
+    'multi-select'
   ])
   .config(function ($routeProvider) {
     $routeProvider
