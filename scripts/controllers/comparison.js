@@ -11,11 +11,12 @@ angular.module('saludEnCifrasApp')
         $scope.prices_attr = Object.keys(provider.precios);
         $scope.times_attr = Object.keys(provider.tiempos_espera);
         $scope.structure_attr = Object.keys(provider.estructura);
+        console.log($scope.providers);
         $scope.resources_attr = Object.keys(provider.rrhh);
         $scope.selectedProvidersList = $scope.providers.map(function(provider) {
           return {
             id: provider.id,
-            name: provider.estructura.nombre_abreviado,
+            name: (provider.estructura) ? provider.estructura.nombre_abreviado : "proveedor incompleto!",
             info: provider,
             ticked: false }
         });
