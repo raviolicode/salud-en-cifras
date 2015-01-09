@@ -1,0 +1,21 @@
+{
+  "name": "a-tu-servicio",
+  "version": "0.0.1",
+  "homepage": "http://atuservicio.uy",
+  "authors": [
+    "Lucia Escanellas <raviolicode@gmail.com>"
+  ],
+  "description": "Informacion sobre mutualistas",
+  "license": "MIT",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-multi-select": "~2.0.2"
+  }
+}
